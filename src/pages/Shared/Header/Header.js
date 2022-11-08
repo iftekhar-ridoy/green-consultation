@@ -1,17 +1,40 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../../../Assets/Logo/Green-Leaf-PNG-Free-Image.png';
-import { HiOutlinePhone } from "react-icons/hi"
+import { AuthContext } from '../../../Context/AuthProvider/AuthProvider';
 
 const Header = () => {
-    const menuItems = [
-        <li className='font-semibold text-xl mr-3'><Link to='/'>Home</Link> </li>,
-        <li className='font-semibold text-xl mr-3'><Link to='/'>About</Link> </li>,
-        <li className='font-semibold text-xl mr-3'><Link to='/'>Services</Link> </li>,
-        <li className='font-semibold text-xl mr-3'><Link to='/'>Reviews</Link> </li>,
-        <li className='font-semibold text-xl mr-3'><Link to='/blog'>Blog</Link> </li>,
-        <li className='font-semibold text-xl mr-3'><Link to='/signin'>Sign In</Link> </li>,
-    ]
+
+    const { user, signOutUser } = useContext(AuthContext);
+
+    const handleSignOut = () => {
+        signOutUser()
+            .then()
+            .catch()
+    }
+
+    const menuItems = <>
+        {
+            user?.email ?
+                <>
+                    <li className='font-semibold mr-3'><Link to='/'>Home</Link> </li>
+                    <li className='font-semibold mr-3'><Link to='/'>About</Link> </li>
+                    <li className='font-semibold mr-3'><Link to='/blog'>Blog</Link> </li>
+                    <li onClick={handleSignOut} className='font-semibold block lg:hidden'><Link>Sign Out</Link></li>
+                </>
+                :
+                <>
+                    <li className='font-semibold mr-3'><Link to='/'>Home</Link> </li>
+                    <li className='font-semibold mr-3'><Link to='/'>About</Link> </li>
+                    <li className='font-semibold mr-3'><Link to='/blog'>Blog</Link> </li>
+                    <li className='font-semibold block lg:hidden'><Link to='/signin'>Sign In</Link> </li>
+                </>
+
+
+        }
+    </>
+
+
     return (
         <div className="navbar h-20 py-5 mb-5 bg-slate-200">
             <div className="navbar-start">
@@ -33,23 +56,24 @@ const Header = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-                {/* {
+                {
                     user?.email ?
-                        <ul tabIndex={0} className="menu menu-compact dropdown-content p-2 bg-base-100 rounded-box hidden lg:block">
+                        <ul tabIndex={0} className="menu menu-horizontal p-0  hidden lg:block">
                             <menu className='mr-3'>
-                                <li onClick={handleSingOut} className='font-semibold '>
+                                <li onClick={handleSignOut} className='font-semibold '>
                                     <Link>Sign Out</Link> </li>
                             </menu>
                         </ul>
                         :
-                        <ul tabIndex={0} className="menu menu-compact dropdown-content p-2 bg-base-100 rounded-box hidden lg:block">
+                        <ul tabIndex={0} className="menu menu-horizontal p-0  hidden lg:block">
                             <menu className='mr-3'>
-                                <li className='font-semibold '><Link to='/login'>Login</Link> </li>
+                                <li className='font-semibold '><Link to='/signin'>Sign In</Link> </li>
                             </menu>
                         </ul>
-                } */}
 
-                <li className='hidden lg:contents text-xl text-green-600 font-bold'><HiOutlinePhone className='mr-2 text-green-600'></HiOutlinePhone><span className='mr-5'> 01302690768</span></li>
+                }
+
+
             </div>
         </div>
 

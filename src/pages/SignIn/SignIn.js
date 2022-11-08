@@ -1,4 +1,3 @@
-import { GoogleAuthProvider } from 'firebase/auth';
 import React, { useContext, useState } from 'react';
 import { FcGoogle } from 'react-icons/fc';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
@@ -35,9 +34,8 @@ const SignIn = () => {
     }
 
     // sign in by Google 
-    const googleProvider = new GoogleAuthProvider();
     const handleGoogleSignIn = () => {
-        googleSignInUser(googleProvider)
+        googleSignInUser()
             .then(res => {
                 const user = res.user;
                 console.log(user);
@@ -87,7 +85,7 @@ const SignIn = () => {
                     <div className='card-body -mt-14'>
                         <div className="divider mt-0">OR</div>
                         <div className="-mt-4">
-                            <button onClick={handleGoogleSignIn} className='btn btn-outline w-full'>
+                            <button onClick={handleGoogleSignIn} className='btn btn-outline bt w-full'>
                                 <FcGoogle className='mr-2 text-xl'></FcGoogle>Google</button>
                         </div>
 
