@@ -10,10 +10,10 @@ const Header = () => {
         <li className='font-semibold text-xl mr-3'><Link to='/'>Services</Link> </li>,
         <li className='font-semibold text-xl mr-3'><Link to='/'>Reviews</Link> </li>,
         <li className='font-semibold text-xl mr-3'><Link to='/blog'>Blog</Link> </li>,
-        <li className='font-semibold text-xl mr-3'><Link to='/'>Login</Link> </li>,
+        <li className='font-semibold text-xl mr-3'><Link to='/signin'>Sign In</Link> </li>,
     ]
     return (
-        <div className="navbar h-20 py-5 mb-12 bg-slate-200">
+        <div className="navbar h-20 py-5 mb-5 bg-slate-200">
             <div className="navbar-start">
                 <div className="dropdown">
                     <label tabIndex={0} className="btn btn-ghost lg:hidden">
