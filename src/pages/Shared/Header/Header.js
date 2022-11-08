@@ -23,8 +23,8 @@ const Header = () => {
                         {menuItems}
                     </ul>
                 </div>
-                <Link to='/' className="btn btn-ghost normal-case text-2xl text-green-800 font-bold">
-                    <img className='h-10 mr-1' src={logo} alt="" /> Green Consult
+                <Link to='/' className="btn btn-ghost  normal-case text-2xl text-green-800 font-bold">
+                    <img className='h-7 mr-1' src={logo} alt="" /> Green Consult
                 </Link>
             </div>
             <div className="navbar-center hidden lg:flex">
