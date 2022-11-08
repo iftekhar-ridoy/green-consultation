@@ -1,15 +1,19 @@
-import React, { useContext } from 'react';
+import { GoogleAuthProvider } from 'firebase/auth';
+import React, { useContext, useState } from 'react';
+import { FcGoogle } from 'react-icons/fc';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import logo from '../../Assets/Logo/Green-Leaf-PNG-Free-Image.png'
 import { AuthContext } from '../../Context/AuthProvider/AuthProvider';
 
 const SignIn = () => {
     const { signInUser, googleSignInUser } = useContext(AuthContext);
+    const [error, setError] = useState('');
 
     const navigate = useNavigate();
     const location = useLocation();
     const from = location.state?.from?.pathname || '/';
 
+    // sign in by email password 
     const handleSignIn = (event) => {
         event.preventDefault();
         const form = event.target;
@@ -24,7 +28,27 @@ const SignIn = () => {
                 form.reset();
                 navigate(from, { replace: true });
             })
+            .catch(error => {
+                console.error(error);
+                setError(error.message);
+            })
     }
+
+    // sign in by Google 
+    const googleProvider = new GoogleAuthProvider();
+    const handleGoogleSignIn = () => {
+        googleSignInUser(googleProvider)
+            .then(res => {
+                const user = res.user;
+                console.log(user);
+                navigate(from, { replace: true });
+            })
+            .catch(error => {
+                console.error(error);
+            })
+    }
+
+
     return (
         <div className="hero w-full mb-32">
             <div className="hero-content grid md:grid-cols-2 gap-10 flex-col lg:flex-row">
@@ -57,9 +81,20 @@ const SignIn = () => {
                             </label>
                         </div>
                         <div className="form-control mt-6">
-                            <input className="btn bg-green-600" type="submit" value="Login" />
+                            <input className="btn bg-green-600" type="submit" value="Sign In" />
                         </div>
                     </form>
+                    <div className='card-body -mt-14'>
+                        <div className="divider mt-0">OR</div>
+                        <div className="-mt-4">
+                            <button onClick={handleGoogleSignIn} className='btn btn-outline w-full'>
+                                <FcGoogle className='mr-2 text-xl'></FcGoogle>Google</button>
+                        </div>
+
+                        <p className='d-block text-red-600'>
+                            {error}
+                        </p>
+                    </div>
                     <p className='text-center'>New to Green Consult? <Link className='text-green-600 font-bold' to='/signup'>Sign Up</Link></p>
                 </div>
             </div>
