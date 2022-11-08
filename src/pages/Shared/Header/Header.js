@@ -5,12 +5,12 @@ import { HiOutlinePhone } from "react-icons/hi"
 
 const Header = () => {
     const menuItems = [
-        <li className='font-semibold text-xl'><Link to='/'>Home</Link> </li>,
-        <li className='font-semibold text-xl'><Link to='/'>About</Link> </li>,
-        <li className='font-semibold text-xl'><Link to='/'>Services</Link> </li>,
-        <li className='font-semibold text-xl'><Link to='/'>Reviews</Link> </li>,
-        <li className='font-semibold text-xl'><Link to='/blog'>Blog</Link> </li>,
-        <li className='font-semibold text-xl'><Link to='/'>Login</Link> </li>,
+        <li className='font-semibold text-xl mr-3'><Link to='/'>Home</Link> </li>,
+        <li className='font-semibold text-xl mr-3'><Link to='/'>About</Link> </li>,
+        <li className='font-semibold text-xl mr-3'><Link to='/'>Services</Link> </li>,
+        <li className='font-semibold text-xl mr-3'><Link to='/'>Reviews</Link> </li>,
+        <li className='font-semibold text-xl mr-3'><Link to='/blog'>Blog</Link> </li>,
+        <li className='font-semibold text-xl mr-3'><Link to='/'>Login</Link> </li>,
     ]
     return (
         <div className="navbar h-20 py-5 mb-12 bg-slate-200">
