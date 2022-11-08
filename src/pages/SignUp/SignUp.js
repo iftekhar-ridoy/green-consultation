@@ -1,9 +1,29 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../../Assets/Logo/Green-Leaf-PNG-Free-Image.png'
+import { AuthContext } from '../../Context/AuthProvider/AuthProvider';
 
 const SignUp = () => {
-    const handleSignUp = () => {
+
+    const { signUpUser } = useContext(AuthContext);
+
+    const handleSignUp = (event) => {
+        event.preventDefault();
+        const form = event.target;
+        const name = form.name.value;
+        const email = form.email.value;
+        const password = form.password.value;
+        console.log(name, email, password);
+
+        signUpUser(email, password)
+            .then(res => {
+                const user = res.user;
+                console.log(user);
+                form.reset();
+            })
+            .catch(error => {
+                console.error(error);
+            })
 
     }
     return (
