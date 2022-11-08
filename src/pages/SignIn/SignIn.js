@@ -1,10 +1,29 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useContext } from 'react';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import logo from '../../Assets/Logo/Green-Leaf-PNG-Free-Image.png'
+import { AuthContext } from '../../Context/AuthProvider/AuthProvider';
 
 const SignIn = () => {
-    const handleSignIn = () => {
+    const { signInUser, googleSignInUser } = useContext(AuthContext);
 
+    const navigate = useNavigate();
+    const location = useLocation();
+    const from = location.state?.from?.pathname || '/';
+
+    const handleSignIn = (event) => {
+        event.preventDefault();
+        const form = event.target;
+        const email = form.email.value;
+        const password = form.password.value;
+        console.log(email, password);
+
+        signInUser(email, password)
+            .then(res => {
+                const user = res.user;
+                console.log(user);
+                form.reset();
+                navigate(from, { replace: true });
+            })
     }
     return (
         <div className="hero w-full mb-32">
