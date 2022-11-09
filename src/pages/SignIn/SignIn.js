@@ -4,6 +4,8 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import logo from '../../Assets/Logo/Green-Leaf-PNG-Free-Image.png'
 import { AuthContext } from '../../Context/AuthProvider/AuthProvider';
 import useTitle from '../../useTitle/useTitle';
+import toast, { Toaster } from 'react-hot-toast';
+
 
 const SignIn = () => {
     const { signInUser, googleSignInUser } = useContext(AuthContext);
@@ -25,6 +27,7 @@ const SignIn = () => {
 
         signInUser(email, password)
             .then(res => {
+                toast.success('Sign In Seccuessful');
                 const user = res.user;
                 console.log(user);
                 form.reset();
@@ -51,7 +54,7 @@ const SignIn = () => {
 
 
     return (
-        <div className="hero w-full mb-32">
+        <div className="hero max-w-7xl mx-auto mb-32">
             <div className="hero-content grid md:grid-cols-2 gap-10 flex-col lg:flex-row">
                 <div className="text-center">
                     <div className='flex flex-col justify-center items-center'>
@@ -97,6 +100,7 @@ const SignIn = () => {
                         </p>
                     </div>
                     <p className='text-center'>New to Green Consult? <Link className='text-green-600 font-bold' to='/signup'>Sign Up</Link></p>
+                    <Toaster />
                 </div>
             </div>
         </div>

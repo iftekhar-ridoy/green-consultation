@@ -1,15 +1,27 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import { AuthContext } from '../../Context/AuthProvider/AuthProvider';
 import useTitle from '../../useTitle/useTitle';
 import Offer from './Offer';
 import Process from './Process';
+import toast, { Toaster } from 'react-hot-toast';
+import AllReviews from '../Reviews/AllReviews';
+
+
+
 
 const Details = () => {
     const { _id, title, img, description, offer, process } = useLoaderData();
     const { user } = useContext(AuthContext);
-
+    const [reviews, setReviews] = useState([]);
     useTitle(`Details(${title})`);
+
+    useEffect(() => {
+        fetch(`http://localhost:5000/reviews`)
+            .then(res => res.json())
+            .then(data => setReviews(data))
+    }, [])
+
 
     const handlePlaceComment = event => {
         event.preventDefault();
@@ -19,11 +31,13 @@ const Details = () => {
         const rating = form.rating.value;
         const email = user?.email || 'unregistered';
         const comments = form.comments.value;
+        const photo = user?.photoURL || 'no photo';
 
         const review = {
             service: _id,
             serviceName: title,
             customer: name,
+            photo: photo,
             phone,
             rating,
             email,
@@ -41,7 +55,7 @@ const Details = () => {
             .then(data => {
                 console.log(data)
                 if (data.acknowledged) {
-                    alert('Reviewed Success');
+                    toast.success('Reviewed Success');
                     form.reset();
                 }
             })
@@ -97,7 +111,7 @@ const Details = () => {
                         <div className='text-3xl text-center font-bold py-5'>Please give your valuable review about: {title} therapy</div>
                         <div className='divider -mt-2'></div>
                         <div className='grid grid-cols-1 lg:grid-cols-2 gap-4'>
-                            <input name='name' type="text" placeholder="Your Name" className="input w-full input-bordered" required />
+                            <input name='name' defaultValue={user?.name} type="text" placeholder="Your Name" className="input w-full input-bordered" required />
                             <input name='phone' type="text" placeholder="Your Phone" className="input w-full input-bordered" required />
                             <input name='rating' type="text" placeholder="Give a rating based on 5" className="input w-full input-bordered" required />
                             <input name='email' type="text" placeholder="Your Email" defaultValue={user?.email} readOnly className="input w-full input-bordered text-gray-500" required />
@@ -110,6 +124,27 @@ const Details = () => {
                             <input className='btn mb-5' type="submit" value="Submit Review" />
                         </div>
                     </form>
+                    <Toaster />
+                </div>
+            </section>
+
+
+            {/* all reviews  */}
+            <section>
+                <div className='bg-slate-200 p-10 mt-20'>
+                    <div className='text-3xl text-center font-bold py-5'>Others Reviews</div>
+                    <div className='divider -mt-2'></div>
+                    <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mx-6 mt-10 '>
+                        {
+                            reviews?.map(review =>
+                                <AllReviews
+                                    key={review._id}
+                                    review={review}
+                                ></AllReviews>
+                            )
+                        }
+                    </div>
+
                 </div>
             </section>
         </div>

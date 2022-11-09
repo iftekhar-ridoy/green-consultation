@@ -1,13 +1,17 @@
 import React, { useContext } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import logo from '../../Assets/Logo/Green-Leaf-PNG-Free-Image.png'
 import { AuthContext } from '../../Context/AuthProvider/AuthProvider';
 import useTitle from '../../useTitle/useTitle';
 
 const SignUp = () => {
 
-    const { signUpUser } = useContext(AuthContext);
+    const { signUpUser, updateUserProfile } = useContext(AuthContext);
     useTitle('SignUp');
+
+    const navigate = useNavigate();
+    const location = useLocation();
+    const from = location.state?.from?.pathname || '/';
 
     const handleSignUp = (event) => {
         event.preventDefault();
@@ -23,10 +27,22 @@ const SignUp = () => {
                 const user = res.user;
                 console.log(user);
                 form.reset();
+                handleUpdateUserProfile(name, imageURL);
+                navigate(from, { replace: true });
             })
             .catch(error => {
                 console.error(error);
             })
+
+        const handleUpdateUserProfile = (name, imageURL) => {
+            const profile = {
+                displayName: name,
+                imageURL: imageURL
+            }
+            updateUserProfile(profile)
+                .then(() => { })
+                .catch(error => console.error(error));
+        }
 
     }
     return (
