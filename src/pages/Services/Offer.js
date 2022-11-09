@@ -1,7 +1,6 @@
 import React from 'react';
 
 const Offer = ({ ofr, idx }) => {
-    console.log(ofr.idx)
     const { offerName, offerImg, offerDescription } = ofr;
     return (
         <div>

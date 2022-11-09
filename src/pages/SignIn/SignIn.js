@@ -3,10 +3,13 @@ import { FcGoogle } from 'react-icons/fc';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import logo from '../../Assets/Logo/Green-Leaf-PNG-Free-Image.png'
 import { AuthContext } from '../../Context/AuthProvider/AuthProvider';
+import useTitle from '../../useTitle/useTitle';
 
 const SignIn = () => {
     const { signInUser, googleSignInUser } = useContext(AuthContext);
     const [error, setError] = useState('');
+
+    useTitle('SignIn');
 
     const navigate = useNavigate();
     const location = useLocation();

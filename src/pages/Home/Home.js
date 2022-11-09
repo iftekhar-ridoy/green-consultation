@@ -3,9 +3,11 @@ import { Link } from 'react-router-dom';
 import ServiceCard from '../Services/ServiceCard';
 import banner from '../../Assets/Banner/banner.jpg'
 import { BsArrowRight } from 'react-icons/bs';
+import useTitle from '../../useTitle/useTitle';
 
 const Home = () => {
     const [services, setServices] = useState();
+    useTitle('Home')
     useEffect(() => {
         fetch('http://localhost:5000/')
             .then(res => res.json())
