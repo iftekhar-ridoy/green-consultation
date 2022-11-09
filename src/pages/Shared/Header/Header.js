@@ -17,17 +17,17 @@ const Header = () => {
         {
             user?.email ?
                 <>
-                    <li className='font-semibold mr-3'><Link to='/'>Home</Link> </li>
-                    <li className='font-semibold mr-3'><Link to='/'>About</Link> </li>
-                    <li className='font-semibold mr-3'><Link to='/blog'>Blog</Link> </li>
-                    <li onClick={handleSignOut} className='font-semibold block lg:hidden'><Link>Sign Out</Link></li>
+                    <li className='font-semibold text-lg mr-3'><Link to='/'>Home</Link> </li>
+                    <li className='font-semibold text-lg mr-3'><Link to='/'>About</Link> </li>
+                    <li className='font-semibold text-lg mr-3'><Link to='/blog'>Blog</Link> </li>
+                    <li onClick={handleSignOut} className='text-lg font-semibold block lg:hidden'><Link>Sign Out</Link></li>
                 </>
                 :
                 <>
-                    <li className='font-semibold mr-3'><Link to='/'>Home</Link> </li>
-                    <li className='font-semibold mr-3'><Link to='/'>About</Link> </li>
-                    <li className='font-semibold mr-3'><Link to='/blog'>Blog</Link> </li>
-                    <li className='font-semibold block lg:hidden'><Link to='/signin'>Sign In</Link> </li>
+                    <li className='font-semibold text-lg mr-3'><Link to='/'>Home</Link> </li>
+                    <li className='font-semibold text-lg mr-3'><Link to='/'>About</Link> </li>
+                    <li className='font-semibold text-lg mr-3'><Link to='/blog'>Blog</Link> </li>
+                    <li className='font-semibold text-lg block lg:hidden'><Link to='/signin'>Sign In</Link> </li>
                 </>
 
 
@@ -60,14 +60,14 @@ const Header = () => {
                     user?.email ?
                         <ul tabIndex={0} className="menu menu-horizontal p-0  hidden lg:block">
                             <menu className='mr-3'>
-                                <li onClick={handleSignOut} className='font-semibold '>
+                                <li onClick={handleSignOut} className='text-lg font-semibold '>
                                     <Link>Sign Out</Link> </li>
                             </menu>
                         </ul>
                         :
                         <ul tabIndex={0} className="menu menu-horizontal p-0  hidden lg:block">
                             <menu className='mr-3'>
-                                <li className='font-semibold '><Link to='/signin'>Sign In</Link> </li>
+                                <li className='text-lg font-semibold '><Link to='/signin'>Sign In</Link> </li>
                             </menu>
                         </ul>
 

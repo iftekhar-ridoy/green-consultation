@@ -2,31 +2,169 @@
     {
         "title": "Relationships",
         "img": "https://images.unsplash.com/photo-1542338347-4fff3276af78?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8Y291bnNlbGluZ3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
-        "description": "Relationship counseling, also known as couples counseling or couples therapy, is a type of psychotherapy that focuses on helping people improve their romantic relationships. By working with a therapist, couples can explore issues in their relationship, work on their communication, improve interactions, and resolve conflicts. While relationship counseling is often used to address problems, it can be helpful at any stage of a relationship. People in healthy, happy relationships can still benefit from counseling that strengthens their communication and connection."
+        "description": "Relationship counseling, also known as couples counseling or couples therapy, is a type of psychotherapy that focuses on helping people improve their romantic relationships. By working with a therapist, couples can explore issues in their relationship, work on their communication, improve interactions, and resolve conflicts. While relationship counseling is often used to address problems, it can be helpful at any stage of a relationship. People in healthy, happy relationships can still benefit from counseling that strengthens their communication and connection.",
+        "offer": [
+            {
+                "offerName": "Reliability",
+                "offerImg": "https://cdn-icons-png.flaticon.com/512/1253/1253977.png?w=740&t=st=1667934351~exp=1667934951~hmac=e6043fbe3fb1fa223de8b7f28cd5690d9021139b0f9327cb592f8134f5c629b6",
+                "offerDescription": "Service will perform its intended function adequately for a specified period of time, or will operate in a defined environment without failure."
+            },
+            {
+                "offerName": "Support",
+                "offerImg": "https://cdn-icons-png.flaticon.com/512/1239/1239298.png?w=740&t=st=1667934411~exp=1667935011~hmac=524cef2f93141c0f2138d5559e0bdef58fba7ba83dfddda66ea9f0fb91fcbd8f",
+                "offerDescription": "The provision of assistance or comfort to others, typically to help them cope with biological, psychological, and social stressors."
+            },
+            {
+                "offerName": "Confidentiality",
+                "offerImg": "https://cdn-icons-png.flaticon.com/512/656/656588.png?w=740&t=st=1667934573~exp=1667935173~hmac=b8db25282c745b17a0a3c43d8fba667c913ae60db6b9de52a2421b90b9ba78cd",
+                "offerDescription": "Identity of a consulted person, but takes steps to protect that identity from being discovered by others.."
+            }
+        ],
+        "process": [
+            "Request on the site",
+            "Appointment time",
+            "Therapy session",
+            "Satisfied review"
+        ]
     },
     {
         "title": "Anxiety Disorder",
         "img": "https://images.unsplash.com/photo-1493836512294-502baa1986e2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8Y291bnNlbGluZ3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
-        "description": "An anxiety disorder is a type of mental health condition. If you have an anxiety disorder, you may respond to certain things and situations with fear and dread. You may also experience physical signs of anxiety, such as a pounding heart and sweating. It’s normal to have some anxiety. You may feel anxious or nervous if you have to tackle a problem at work, go to an interview, take a test or make an important decision. And anxiety can even be beneficial. For example, anxiety helps us notice dangerous situations and focuses our attention, so we stay safe. But an anxiety disorder goes beyond the regular nervousness and slight fear you may feel from time to time. An anxiety disorder happens when: Anxiety interferes with your ability to function. You often overreact when something triggers your emotions. You can’t control your responses to situations. Anxiety disorders can make it difficult to get through the day. Fortunately, there are several effective treatments for anxiety disorders."
+        "description": "An anxiety disorder is a type of mental health condition. If you have an anxiety disorder, you may respond to certain things and situations with fear and dread. You may also experience physical signs of anxiety, such as a pounding heart and sweating. It’s normal to have some anxiety. You may feel anxious or nervous if you have to tackle a problem at work, go to an interview, take a test or make an important decision. And anxiety can even be beneficial. For example, anxiety helps us notice dangerous situations and focuses our attention, so we stay safe. But an anxiety disorder goes beyond the regular nervousness and slight fear you may feel from time to time. An anxiety disorder happens when: Anxiety interferes with your ability to function. You often overreact when something triggers your emotions. You can’t control your responses to situations. Anxiety disorders can make it difficult to get through the day. Fortunately, there are several effective treatments for anxiety disorders.",
+        "offer": [
+            {
+                "offerName": "Reliability",
+                "offerImg": "https://cdn-icons-png.flaticon.com/512/1253/1253977.png?w=740&t=st=1667934351~exp=1667934951~hmac=e6043fbe3fb1fa223de8b7f28cd5690d9021139b0f9327cb592f8134f5c629b6",
+                "offerDescription": "Service will perform its intended function adequately for a specified period of time, or will operate in a defined environment without failure."
+            },
+            {
+                "offerName": "Support",
+                "offerImg": "https://cdn-icons-png.flaticon.com/512/1239/1239298.png?w=740&t=st=1667934411~exp=1667935011~hmac=524cef2f93141c0f2138d5559e0bdef58fba7ba83dfddda66ea9f0fb91fcbd8f",
+                "offerDescription": "The provision of assistance or comfort to others, typically to help them cope with biological, psychological, and social stressors."
+            },
+            {
+                "offerName": "Confidentiality",
+                "offerImg": "https://cdn-icons-png.flaticon.com/512/656/656588.png?w=740&t=st=1667934573~exp=1667935173~hmac=b8db25282c745b17a0a3c43d8fba667c913ae60db6b9de52a2421b90b9ba78cd",
+                "offerDescription": "Identity of a consulted person, but takes steps to protect that identity from being discovered by others.."
+            }
+        ],
+        "process": [
+            "Request on the site",
+            "Appointment time",
+            "Therapy session",
+            "Satisfied review"
+        ]
     },
     {
         "title": "Depression Therapy",
         "img": "https://images.unsplash.com/photo-1523495338267-31cbca7759e2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8YW54aWV0eXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
-        "description": ""
+        "description": "Formats for depression therapy as an alternative to face-to-face office sessions are available and may be an effective option for some people. Therapy can be provided, for example, as a computer program, by online sessions, or using videos or workbooks. Programs can be guided by a therapist or be partially or totally independent. Before you choose one of these options, discuss these formats with your therapist to determine if they may be helpful for you. Also, ask your therapist if he or she can recommend a trusted source or program. Some may not be covered by your insurance and not all developers and online therapists have the proper credentials or training. Smartphones and tablets that offer mobile health apps, such as support and general education about depression, are not a substitute for seeing your doctor or therapist.",
+        "offer": [
+            {
+                "offerName": "Reliability",
+                "offerImg": "https://cdn-icons-png.flaticon.com/512/1253/1253977.png?w=740&t=st=1667934351~exp=1667934951~hmac=e6043fbe3fb1fa223de8b7f28cd5690d9021139b0f9327cb592f8134f5c629b6",
+                "offerDescription": "Service will perform its intended function adequately for a specified period of time, or will operate in a defined environment without failure."
+            },
+            {
+                "offerName": "Support",
+                "offerImg": "https://cdn-icons-png.flaticon.com/512/1239/1239298.png?w=740&t=st=1667934411~exp=1667935011~hmac=524cef2f93141c0f2138d5559e0bdef58fba7ba83dfddda66ea9f0fb91fcbd8f",
+                "offerDescription": "The provision of assistance or comfort to others, typically to help them cope with biological, psychological, and social stressors."
+            },
+            {
+                "offerName": "Confidentiality",
+                "offerImg": "https://cdn-icons-png.flaticon.com/512/656/656588.png?w=740&t=st=1667934573~exp=1667935173~hmac=b8db25282c745b17a0a3c43d8fba667c913ae60db6b9de52a2421b90b9ba78cd",
+                "offerDescription": "Identity of a consulted person, but takes steps to protect that identity from being discovered by others.."
+            }
+        ],
+        "process": [
+            "Request on the site",
+            "Appointment time",
+            "Therapy session",
+            "Satisfied review"
+        ]
     },
     {
         "title": "Couple Counseling",
         "img": "https://images.unsplash.com/photo-1558403194-611308249627?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8Y291bnNlbGluZ3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
-        "description": "An anxiety disorder is a type of mental health condition. If you have an anxiety disorder, you may respond to certain things and situations with fear and dread. You may also experience physical signs of anxiety, such as a pounding heart and sweating. It’s normal to have some anxiety. You may feel anxious or nervous if you have to tackle a problem at work, go to an interview, take a test or make an important decision. And anxiety can even be beneficial. For example, anxiety helps us notice dangerous situations and focuses our attention, so we stay safe. But an anxiety disorder goes beyond the regular nervousness and slight fear you may feel from time to time. An anxiety disorder happens when: Anxiety interferes with your ability to function. You often overreact when something triggers your emotions. You can’t control your responses to situations. Anxiety disorders can make it difficult to get through the day. Fortunately, there are several effective treatments for anxiety disorders."
+        "description": "An anxiety disorder is a type of mental health condition. If you have an anxiety disorder, you may respond to certain things and situations with fear and dread. You may also experience physical signs of anxiety, such as a pounding heart and sweating. It’s normal to have some anxiety. You may feel anxious or nervous if you have to tackle a problem at work, go to an interview, take a test or make an important decision. And anxiety can even be beneficial. For example, anxiety helps us notice dangerous situations and focuses our attention, so we stay safe. But an anxiety disorder goes beyond the regular nervousness and slight fear you may feel from time to time. An anxiety disorder happens when: Anxiety interferes with your ability to function. You often overreact when something triggers your emotions. You can’t control your responses to situations. Anxiety disorders can make it difficult to get through the day. Fortunately, there are several effective treatments for anxiety disorders.",
+        "offer": [
+            {
+                "offerName": "Reliability",
+                "offerImg": "https://cdn-icons-png.flaticon.com/512/1253/1253977.png?w=740&t=st=1667934351~exp=1667934951~hmac=e6043fbe3fb1fa223de8b7f28cd5690d9021139b0f9327cb592f8134f5c629b6",
+                "offerDescription": "Service will perform its intended function adequately for a specified period of time, or will operate in a defined environment without failure."
+            },
+            {
+                "offerName": "Support",
+                "offerImg": "https://cdn-icons-png.flaticon.com/512/1239/1239298.png?w=740&t=st=1667934411~exp=1667935011~hmac=524cef2f93141c0f2138d5559e0bdef58fba7ba83dfddda66ea9f0fb91fcbd8f",
+                "offerDescription": "The provision of assistance or comfort to others, typically to help them cope with biological, psychological, and social stressors."
+            },
+            {
+                "offerName": "Confidentiality",
+                "offerImg": "https://cdn-icons-png.flaticon.com/512/656/656588.png?w=740&t=st=1667934573~exp=1667935173~hmac=b8db25282c745b17a0a3c43d8fba667c913ae60db6b9de52a2421b90b9ba78cd",
+                "offerDescription": "Identity of a consulted person, but takes steps to protect that identity from being discovered by others.."
+            }
+        ],
+        "process": [
+            "Request on the site",
+            "Appointment time",
+            "Therapy session",
+            "Satisfied review"
+        ]
     },
     {
         "title": "Individual Counseling",
         "img": "https://images.unsplash.com/photo-1573495804664-b1c0849525af?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8Y291bnNlbGluZ3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
-        "description": "Individual counseling (sometimes called psychotherapy, talk therapy, or treatment) is a process through which clients work one-on-one with a trained mental health clinician in a safe, caring, and confidential environment. Counseling allows individuals to explore their feelings, beliefs, and behaviors, work through challenging or influential memories, identify aspects of their lives that they would like to change, better understand themselves and others, set personal goals, and work toward desired change. Individual counseling is counseling focused on the individual's immediate or near future concerns. Individual counseling may encompass career counseling and planning, grief after a loved one dies or dealing with problems at a job before they become big. Individual counseling is a one-on-one discussion between the counselor and the client, who is the person seeking treatment. The two form an alliance, relationship or bond that enables trust and personal growth."
+        "description": "Individual counseling (sometimes called psychotherapy, talk therapy, or treatment) is a process through which clients work one-on-one with a trained mental health clinician in a safe, caring, and confidential environment. Counseling allows individuals to explore their feelings, beliefs, and behaviors, work through challenging or influential memories, identify aspects of their lives that they would like to change, better understand themselves and others, set personal goals, and work toward desired change. Individual counseling is counseling focused on the individual's immediate or near future concerns. Individual counseling may encompass career counseling and planning, grief after a loved one dies or dealing with problems at a job before they become big. Individual counseling is a one-on-one discussion between the counselor and the client, who is the person seeking treatment. The two form an alliance, relationship or bond that enables trust and personal growth.",
+        "offer": [
+            {
+                "offerName": "Reliability",
+                "offerImg": "https://cdn-icons-png.flaticon.com/512/1253/1253977.png?w=740&t=st=1667934351~exp=1667934951~hmac=e6043fbe3fb1fa223de8b7f28cd5690d9021139b0f9327cb592f8134f5c629b6",
+                "offerDescription": "Service will perform its intended function adequately for a specified period of time, or will operate in a defined environment without failure."
+            },
+            {
+                "offerName": "Support",
+                "offerImg": "https://cdn-icons-png.flaticon.com/512/1239/1239298.png?w=740&t=st=1667934411~exp=1667935011~hmac=524cef2f93141c0f2138d5559e0bdef58fba7ba83dfddda66ea9f0fb91fcbd8f",
+                "offerDescription": "The provision of assistance or comfort to others, typically to help them cope with biological, psychological, and social stressors."
+            },
+            {
+                "offerName": "Confidentiality",
+                "offerImg": "https://cdn-icons-png.flaticon.com/512/656/656588.png?w=740&t=st=1667934573~exp=1667935173~hmac=b8db25282c745b17a0a3c43d8fba667c913ae60db6b9de52a2421b90b9ba78cd",
+                "offerDescription": "Identity of a consulted person, but takes steps to protect that identity from being discovered by others.."
+            }
+        ],
+        "process": [
+            "Request on the site",
+            "Appointment time",
+            "Therapy session",
+            "Satisfied review"
+        ]
     },
     {
         "title": "Children Therapy",
         "img": "https://images.unsplash.com/photo-1537655780520-1e392ead81f2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8Y2hpbGRyZW58ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
-        "description": "In therapy, kids learn by doing. With younger kids, this means working with the whole family, drawing, playing, and talking. For older kids and teens, therapists share activities and ideas that focus on learning the skills they need. They talk through feelings and solve problems. Therapists give praise and support as kids learn. They help kids believe in themselves and find their strengths. Therapy builds helpful thinking patterns and healthy behavioral habits. A therapist might meet with the child and parent together or meet with the child alone. It depends on the child's age. A therapist might also meet with a parent to give tips and ideas for how to help their child at home."
+        "description": "In therapy, kids learn by doing. With younger kids, this means working with the whole family, drawing, playing, and talking. For older kids and teens, therapists share activities and ideas that focus on learning the skills they need. They talk through feelings and solve problems. Therapists give praise and support as kids learn. They help kids believe in themselves and find their strengths. Therapy builds helpful thinking patterns and healthy behavioral habits. A therapist might meet with the child and parent together or meet with the child alone. It depends on the child's age. A therapist might also meet with a parent to give tips and ideas for how to help their child at home.",
+        "offer": [
+            {
+                "offerName": "Reliability",
+                "offerImg": "https://cdn-icons-png.flaticon.com/512/1253/1253977.png?w=740&t=st=1667934351~exp=1667934951~hmac=e6043fbe3fb1fa223de8b7f28cd5690d9021139b0f9327cb592f8134f5c629b6",
+                "offerDescription": "Service will perform its intended function adequately for a specified period of time, or will operate in a defined environment without failure."
+            },
+            {
+                "offerName": "Support",
+                "offerImg": "https://cdn-icons-png.flaticon.com/512/1239/1239298.png?w=740&t=st=1667934411~exp=1667935011~hmac=524cef2f93141c0f2138d5559e0bdef58fba7ba83dfddda66ea9f0fb91fcbd8f",
+                "offerDescription": "The provision of assistance or comfort to others, typically to help them cope with biological, psychological, and social stressors."
+            },
+            {
+                "offerName": "Confidentiality",
+                "offerImg": "https://cdn-icons-png.flaticon.com/512/656/656588.png?w=740&t=st=1667934573~exp=1667935173~hmac=b8db25282c745b17a0a3c43d8fba667c913ae60db6b9de52a2421b90b9ba78cd",
+                "offerDescription": "Identity of a consulted person, but takes steps to protect that identity from being discovered by others.."
+            }
+        ],
+        "process": [
+            "Request on the site",
+            "Appointment time",
+            "Therapy session",
+            "Satisfied review"
+        ]
     }
 ]
