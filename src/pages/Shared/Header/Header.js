@@ -1,17 +1,22 @@
 import React, { useContext } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import logo from '../../../Assets/Logo/Green-Leaf-PNG-Free-Image.png';
 import { AuthContext } from '../../../Context/AuthProvider/AuthProvider';
 
 const Header = () => {
 
     const { user, signOutUser } = useContext(AuthContext);
+    const navigate = useNavigate();
+    const location = useLocation();
+    const from = location.state?.from?.pathname || '/';
 
-    const handleSignOut = () => {
+    const handleSignOut = () =>
         signOutUser()
-            .then()
+            .then(res => {
+                return navigate(from, { replace: true })
+            })
             .catch()
-    }
+
 
     const menuItems = <>
         {
@@ -21,7 +26,7 @@ const Header = () => {
                     <li className='font-semibold text-lg mr-3'><Link to='/blog'>Blog</Link> </li>
                     <li className='font-semibold text-lg mr-3'><Link to='/myReviews'>My Reviews</Link> </li>
                     <li className='font-semibold text-lg mr-3'><Link to='/addService'>Add Service</Link> </li>
-                    <li onClick={handleSignOut} className='text-lg font-semibold block lg:hidden'><Link>Sign Out</Link></li>
+                    <li onClick={handleSignOut} className='text-lg font-semibold block lg:hidden'><Link to='/'>Sign Out</Link></li>
                 </>
                 :
                 <>
@@ -79,5 +84,6 @@ const Header = () => {
 
     );
 };
+
 
 export default Header;

@@ -35,21 +35,10 @@ const MyReviews = () => {
 
     return (
         <div className='max-w-7xl mx-auto'>
-            <div className='text-3xl text-center font-bold py-5'>You Have Reviewed {myReviews.length} Service</div>
+            {/* <div className='text-3xl text-center font-bold py-5'>You Have Reviewed {myReviews.length} Service</div>
             <div className='divider -mt-2'></div>
             <div className="overflow-x-auto w-full mx-auto">
                 <div className='mx-3'>
-                    {/* <table className="table w-full">
-                        <thead>
-                            <tr>
-                                <th>ServiceName</th>
-                                <th>Comments</th>
-                                <th>Rating</th>
-                                <th>Edit</th>
-                                <th>Delete</th>
-                            </tr>
-                        </thead>
-                        <tbody> */}
                     {
                         myReviews?.map(myReview =>
                             <MyReviewTable
@@ -58,11 +47,33 @@ const MyReviews = () => {
                                 handleDelete={handleDelete}
                             ></MyReviewTable>)
                     }
-
-                    {/* </tbody>
-                    </table> */}
                 </div>
-            </div>
+            </div> */}
+            {
+                myReviews.length > 0 ?
+                    <>
+                        <div className='text-3xl text-center font-bold py-5'>You Have Reviewed {myReviews.length} Service</div>
+                        <div className='divider -mt-2'></div>
+                        <div className="overflow-x-auto w-full mx-auto">
+                            <div className='mx-3'>
+                                {
+                                    myReviews?.map(myReview =>
+                                        <MyReviewTable
+                                            key={myReview._id}
+                                            myReview={myReview}
+                                            handleDelete={handleDelete}
+                                        ></MyReviewTable>)
+                                }
+                            </div>
+                        </div>
+                    </>
+                    :
+                    <>
+                        <div className=''>
+                            <p>No reviews were added</p>
+                        </div>
+                    </>
+            }
             <Toaster />
         </div>
     );
