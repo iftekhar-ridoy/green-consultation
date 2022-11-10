@@ -7,8 +7,9 @@ import useTitle from '../../useTitle/useTitle';
 import toast, { Toaster } from 'react-hot-toast';
 
 
+
 const SignIn = () => {
-    const { signInUser, googleSignInUser } = useContext(AuthContext);
+    const { signInUser, googleSignInUser, loading, setUser } = useContext(AuthContext);
     const [error, setError] = useState('');
 
     useTitle('SignIn');
@@ -32,6 +33,7 @@ const SignIn = () => {
                 console.log(user);
                 form.reset();
                 navigate(from, { replace: true });
+                setUser(user);
             })
             .catch(error => {
                 console.error(error);
@@ -46,12 +48,16 @@ const SignIn = () => {
                 const user = res.user;
                 console.log(user);
                 navigate(from, { replace: true });
+                setUser(user);
             })
             .catch(error => {
                 console.error(error);
             })
     }
 
+    if (loading) {
+        return <div className="loader absolute left-1/2 top-20"></div>
+    }
 
     return (
         <div className="hero max-w-7xl mx-auto mb-32">

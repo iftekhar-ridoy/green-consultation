@@ -1,70 +1,28 @@
-# Getting Started with Create React App
+# Green Consult
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Live website link []
 
-## Available Scripts
+Live website link: [https://blended-edu-care.web.app/]
 
-In the project directory, you can run:
 
-### `npm start`
+## Client Side Repo
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Client side repository link: https://github.com/Porgramming-Hero-web-course/b6a11-service-review-client-side-Iftekharul152811
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Server Side Repo
 
-### `npm test`
+Server side repository link: https://github.com/Porgramming-Hero-web-course/b6a11-service-review-server-side-Iftekharul152811
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+## About this website
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+1. This site refers a single person serving site.
+2. User can login and register in this site.
+3. There are two login category user can login through Gmail,Google.
+4. User can acquire the service details click the get-consultation button.
+5. User can see other's reviews about the specific service and also he/she can review that servie his/her own.
+6. In case of reviewing the serving, user should be logged in the site other wise he/she won't get the review form.
+7. There are MyReview and Add service page will be apear after signed in.
+8. In myreview page, user can see, edit and delete his/her own reviews.
+9. Add service page gives a form that will make able the user to add service on the service collection.
+10. MongoDB has been used for the databse.

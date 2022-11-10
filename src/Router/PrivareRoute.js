@@ -6,8 +6,9 @@ const PrivareRoute = ({ children }) => {
     const { user, loading } = useContext(AuthContext);
     const location = useLocation();
 
+
     if (loading) {
-        return <h2>Loading...</h2>
+        return <div className="loader absolute left-1/2 top-20"></div>
     }
     if (user) {
         return children;

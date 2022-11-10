@@ -1,10 +1,13 @@
 import React from 'react';
 import { RiDeleteBin5Fill, RiEdit2Fill } from 'react-icons/ri'
 import { Toaster } from 'react-hot-toast';
+import { Link } from 'react-router-dom';
+
 
 
 const MyReviewTable = ({ myReview, handleDelete }) => {
     const { _id, serviceName, comments, rating } = myReview;
+
     return (
         <div>
             <div className='my-5 max-w-2xl mx-auto shadow-xl border-2 rounded-xl'>
@@ -12,7 +15,8 @@ const MyReviewTable = ({ myReview, handleDelete }) => {
                     <div className='flex justify-between mx-3'>
                         <p>Service Name: </p>
                         <p>
-                            <button className='mr-3'><RiEdit2Fill></RiEdit2Fill></button>
+                            <Link to='/myReviewEdit'><button className='mr-3'><RiEdit2Fill></RiEdit2Fill></button></Link>
+
                             <button onClick={() => handleDelete(_id)}><RiDeleteBin5Fill></RiDeleteBin5Fill></button>
                         </p>
                     </div>

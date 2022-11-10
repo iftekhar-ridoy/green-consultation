@@ -11,14 +11,14 @@ const Home = () => {
     const [services, setServices] = useState();
     useTitle('Home')
     useEffect(() => {
-        fetch('http://localhost:5000/')
+        fetch('https://assignment-11-server-iftekharul152811.vercel.app/srv')
             .then(res => res.json())
             .then(data => setServices(data))
     }, [])
 
     return (
         <div className='max-w-7xl mx-auto'>
-            <section>
+            <section className='relative'>
                 <div className='mb-40 mx-3' >
                     <img className='rounded-3xl' src={banner} alt="" />
                 </div>
@@ -107,3 +107,5 @@ const Home = () => {
 };
 
 export default Home;
+
+

@@ -4,7 +4,6 @@ import BlankPage from "../../pages/BlankPage/BlankPage";
 import Blog from "../../pages/Blog/Blog";
 import Home from "../../pages/Home/Home";
 import MyReviews from "../../pages/Reviews/MyReviews";
-
 import AddService from "../../pages/Services/AddService";
 import Details from "../../pages/Services/Details";
 import Services from "../../pages/Services/Services";
@@ -41,7 +40,7 @@ const router = createBrowserRouter([
             {
                 path: '/services/:id',
                 element: <Details></Details>,
-                loader: async ({ params }) => fetch(`http://localhost:5000/services/${params.id}`)
+                loader: async ({ params }) => fetch(`https://assignment-11-server-iftekharul152811.vercel.app/services/${params.id}`)
             },
             {
                 path: '/myReviews',
@@ -50,7 +49,7 @@ const router = createBrowserRouter([
             {
                 path: '/addService',
                 element: <PrivareRoute><AddService></AddService></PrivareRoute>
-            }
+            },
         ]
     },
     {

@@ -14,13 +14,17 @@ const Details = () => {
     const { _id, title, img, description } = useLoaderData();
     const { user } = useContext(AuthContext);
     const [reviews, setReviews] = useState([]);
+
     useTitle(`Details(${title})`);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/reviews`)
+        fetch(`https://assignment-11-server-iftekharul152811.vercel.app/reviews`)
             .then(res => res.json())
-            .then(data => setReviews(data))
-    }, [])
+            .then(data => {
+                console.log('received data', data);
+                setReviews(data)
+            })
+    }, [_id])
 
 
     const handlePlaceComment = event => {
@@ -44,7 +48,7 @@ const Details = () => {
             comments
         }
         // console.log(review);
-        fetch('http://localhost:5000/reviews', {
+        fetch('https://assignment-11-server-iftekharul152811.vercel.app/reviews', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',
@@ -62,6 +66,10 @@ const Details = () => {
             .catch(error => console.error(error));
 
     }
+
+    // const rvw = reviews.filter(naam => naam.serviceName === 'ser' );
+
+
     return (
         <div className='max-w-7xl mx-auto'>
             {/* service details  */}
@@ -121,12 +129,13 @@ const Details = () => {
 
                                     <div>
                                         <p className='mx-3 text-lg font-semibold'>Name:</p>
-                                        <input name='name' defaultValue={user?.name} type="text" placeholder="Your Name" className="input w-full input-bordered" required />
+                                        <input name='name' defaultValue={user?.displayName} type="text" placeholder="Your Name" className="input w-full input-bordered" required />
                                     </div>
 
                                     <div className='my-5'>
                                         <p className='mx-3 text-lg font-semibold'>Phone:</p>
-                                        <input name='phone' type="text" placeholder="Your Phone" className="input w-full input-bordered" required />
+                                        <input name='phone' type="text" placeholder="Your Phone"
+                                            className="input w-full input-bordered" required />
                                     </div>
 
                                     <div className='my-5'>

@@ -6,7 +6,7 @@ import useTitle from '../../useTitle/useTitle';
 
 const SignUp = () => {
 
-    const { signUpUser, updateUserProfile } = useContext(AuthContext);
+    const { signUpUser, updateUserProfile, loading } = useContext(AuthContext);
     useTitle('SignUp');
 
     const navigate = useNavigate();
@@ -37,7 +37,7 @@ const SignUp = () => {
         const handleUpdateUserProfile = (name, imageURL) => {
             const profile = {
                 displayName: name,
-                imageURL: imageURL
+                photoURL: imageURL
             }
             updateUserProfile(profile)
                 .then(() => { })
@@ -45,6 +45,11 @@ const SignUp = () => {
         }
 
     }
+
+    if (loading) {
+        return <div className="loader absolute left-1/2 top-20"></div>
+    }
+
     return (
         <div className="hero w-full mb-32">
             <div className="hero-content grid md:grid-cols-2 gap-10 flex-col lg:flex-row">
