@@ -1,8 +1,8 @@
 # Green Consult
 
-## Live website link []
+## Live website link [https://green-consult.web.app/]
 
-Live website link: [https://blended-edu-care.web.app/]
+Live website link: [https://green-consult.web.app/]
 
 
 ## Client Side Repo
