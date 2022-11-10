@@ -2,6 +2,9 @@ import React, { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../../Context/AuthProvider/AuthProvider';
 import MyReviewTable from './MyReviewTable';
 import toast, { Toaster } from 'react-hot-toast';
+import { FaArrowRight } from 'react-icons/fa'
+import { Link } from 'react-router-dom';
+
 
 
 const MyReviews = () => {
@@ -69,8 +72,11 @@ const MyReviews = () => {
                     </>
                     :
                     <>
-                        <div className=''>
-                            <p>No reviews were added</p>
+                        <div className='flex justify-center my-44'>
+                            <div className=' h-80'>
+                                <p className='text-5xl font-bold text-red-600 text-center my-3'>No Review were added</p>
+                                <p className='text-center my-3'>To review, Go to <Link to='/services' className='fw-bold text-green-800 font-bold flex items-center justify-center text-xl'> Services<FaArrowRight className='ml-3'></FaArrowRight> </Link></p>
+                            </div>
                         </div>
                     </>
             }
