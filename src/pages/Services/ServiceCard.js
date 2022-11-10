@@ -8,9 +8,9 @@ const ServiceCard = ({ service }) => {
     const { title, img, description, _id } = service;
     return (
         <PhotoProvider>
-            <div className="card card-compact w-full bg-base-100 shadow-xl hover:-mt-5">
+            <div className="card card-compact w-full bg-base-100 border-2 hover:shadow-xl hover:-mt-3">
                 <PhotoView src={img}>
-                    <img src={img} alt="na" />
+                    <img className='rounded-xl' src={img} alt="na" />
                 </PhotoView>
                 <div className="card-body">
                     <h2 className="card-title font-bold"> {title}</h2>

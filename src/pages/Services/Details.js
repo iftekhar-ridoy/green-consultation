@@ -75,63 +75,23 @@ const Details = () => {
                         </div>
                     </div>
 
+                    {/* offer  */}
                     <div className=' py-20'>
                         <p className='text-4xl font-bold text-center'>In Consultation, You will get</p>
-                        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mx-6 mt-10 '>
-                            {
-                                offer?.map((ofr, idx) => <Offer
-                                    key={idx}
-                                    ofr={ofr}
-                                ></Offer>)
-                            }
-                        </div>
+                        <Offer></Offer>
                     </div>
 
-
+                    {/* process  */}
                     <div className=' py-20 my-20'>
                         <p className='text-4xl font-bold text-center  animate-pulse'>Counseling Process</p>
-                        <div className='grid grid-cols-1 md:grid-cols-4 gap-6 mx-6 mt-10 pb-10'>
-                            {
-                                process.map((prs, idx) => <Process
-                                    key={idx}
-                                    idx={idx}
-                                    prs={prs}
-                                ></Process>)
-                            }
-                        </div>
+                        <Process></Process>
                     </div>
                 </div>
             </section>
 
-
-            {/* review form  */}
-            <section>
-                <div className='bg-slate-200 p-10'>
-                    <form onSubmit={handlePlaceComment}>
-                        <div className='text-3xl text-center font-bold py-5'>Please give your valuable review about: {title} therapy</div>
-                        <div className='divider -mt-2'></div>
-                        <div className='grid grid-cols-1 lg:grid-cols-2 gap-4'>
-                            <input name='name' defaultValue={user?.name} type="text" placeholder="Your Name" className="input w-full input-bordered" required />
-                            <input name='phone' type="text" placeholder="Your Phone" className="input w-full input-bordered" required />
-                            <input name='rating' type="text" placeholder="Give a rating based on 5" className="input w-full input-bordered" required />
-                            <input name='email' type="text" placeholder="Your Email" defaultValue={user?.email} readOnly className="input w-full input-bordered text-gray-500" required />
-                        </div>
-                        <div className='my-5'>
-                            <textarea name='comments' className="textarea textarea-bordered w-full h-24" placeholder="Comments" required
-                            ></textarea>
-                        </div>
-                        <div className='flex justify-center'>
-                            <input className='btn mb-5' type="submit" value="Submit Review" />
-                        </div>
-                    </form>
-                    <Toaster />
-                </div>
-            </section>
-
-
             {/* all reviews  */}
-            <section>
-                <div className='bg-slate-200 p-10 mt-20'>
+            < section >
+                <div className='bg-slate-200 p-10 mt-20 rounded-xl'>
                     <div className='text-3xl text-center font-bold py-5'>Others Reviews</div>
                     <div className='divider -mt-2'></div>
                     <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mx-6 mt-10 '>
@@ -146,8 +106,50 @@ const Details = () => {
                     </div>
 
                 </div>
-            </section>
-        </div>
+            </section >
+
+            {/* review form  */}
+            <section className='mt-40'>
+                <div className='bg-slate-200 p-10 rounded-xl'>
+                    <form className='max-w-2xl mx-auto' onSubmit={handlePlaceComment}>
+                        <div className='text-3xl text-center font-bold py-5'>Please give your valuable review about: {title} therapy</div>
+                        <div className='divider -mt-2'></div>
+
+
+                        <div>
+                            <p className='mx-3 text-lg font-semibold'>Name:</p>
+                            <input name='name' defaultValue={user?.name} type="text" placeholder="Your Name" className="input w-full input-bordered" required />
+                        </div>
+
+                        <div className='my-5'>
+                            <p className='mx-3 text-lg font-semibold'>Phone:</p>
+                            <input name='phone' type="text" placeholder="Your Phone" className="input w-full input-bordered" required />
+                        </div>
+
+                        <div className='my-5'>
+                            <p className='mx-3 text-lg font-semibold'>Rating Service:</p>
+                            <input name='rating' type="text" placeholder="Give a rating based on 5" className="input w-full input-bordered" required />
+                        </div>
+
+                        <div className='my-5'>
+                            <p className='mx-3 text-lg font-semibold'>Email:</p>
+                            <input name='email' type="text" placeholder="Your Email" defaultValue={user?.email} readOnly className="input w-full input-bordered text-gray-500" required />
+                        </div>
+
+                        <div className='my-5'>
+                            <p className='mx-3 text-lg font-semibold'>Comments:</p>
+                            <textarea name='comments' className="textarea textarea-bordered w-full h-24" placeholder="Comments" required
+                            ></textarea>
+                        </div>
+                        <div className='flex justify-center'>
+                            <input className='btn mb-5' type="submit" value="Submit Review" />
+                        </div>
+                    </form>
+                    <Toaster />
+                </div>
+            </section >
+
+        </div >
     );
 };
 

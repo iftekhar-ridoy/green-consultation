@@ -1,5 +1,7 @@
 import React from 'react';
 import { RiDeleteBin5Fill, RiEdit2Fill } from 'react-icons/ri'
+import { Toaster } from 'react-hot-toast';
+
 
 const MyReviewTable = ({ myReview, handleDelete }) => {
     const { _id, serviceName, comments, rating } = myReview;
@@ -19,6 +21,7 @@ const MyReviewTable = ({ myReview, handleDelete }) => {
             <th>
                 <button onClick={() => handleDelete(_id)}><RiDeleteBin5Fill></RiDeleteBin5Fill></button>
             </th>
+            <Toaster />
         </tr>
     );
 };

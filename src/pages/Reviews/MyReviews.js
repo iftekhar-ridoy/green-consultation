@@ -1,6 +1,8 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../../Context/AuthProvider/AuthProvider';
 import MyReviewTable from './MyReviewTable';
+import toast, { Toaster } from 'react-hot-toast';
+
 
 const MyReviews = () => {
     const { user } = useContext(AuthContext);
@@ -22,7 +24,7 @@ const MyReviews = () => {
                 .then(res => res.json())
                 .then(data => {
                     if (data.deletedCount > 0) {
-                        alert('deleted successfully')
+                        toast.success('deleted successfully')
                         const remainning = myReviews.filter(rvw => rvw._id !== id);
                         setMyReviews(remainning);
                     }
@@ -61,7 +63,7 @@ const MyReviews = () => {
                     </table>
                 </div>
             </div>
-
+            <Toaster />
         </div>
     );
 };
