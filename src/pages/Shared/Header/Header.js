@@ -18,7 +18,6 @@ const Header = () => {
             user?.email ?
                 <>
                     <li className='font-semibold text-lg mr-3'><Link to='/'>Home</Link> </li>
-                    <li className='font-semibold text-lg mr-3'><Link to='/'>About</Link> </li>
                     <li className='font-semibold text-lg mr-3'><Link to='/blog'>Blog</Link> </li>
                     <li className='font-semibold text-lg mr-3'><Link to='/myReviews'>My Reviews</Link> </li>
                     <li className='font-semibold text-lg mr-3'><Link to='/addService'>Add Service</Link> </li>
@@ -27,7 +26,6 @@ const Header = () => {
                 :
                 <>
                     <li className='font-semibold text-lg mr-3'><Link to='/'>Home</Link> </li>
-                    <li className='font-semibold text-lg mr-3'><Link to='/'>About</Link> </li>
                     <li className='font-semibold text-lg mr-3'><Link to='/blog'>Blog</Link> </li>
                     <li className='font-semibold text-lg block lg:hidden'><Link to='/signin'>Sign In</Link> </li>
                 </>

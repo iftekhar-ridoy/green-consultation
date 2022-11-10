@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react';
-import { useLoaderData } from 'react-router-dom';
+import { Link, useLoaderData } from 'react-router-dom';
 import { AuthContext } from '../../Context/AuthProvider/AuthProvider';
 import useTitle from '../../useTitle/useTitle';
 import Offer from './Offer';
@@ -11,7 +11,7 @@ import AllReviews from '../Reviews/AllReviews';
 
 
 const Details = () => {
-    const { _id, title, img, description, offer, process } = useLoaderData();
+    const { _id, title, img, description } = useLoaderData();
     const { user } = useContext(AuthContext);
     const [reviews, setReviews] = useState([]);
     useTitle(`Details(${title})`);
@@ -112,38 +112,57 @@ const Details = () => {
             <section className='mt-40'>
                 <div className='bg-slate-200 p-10 rounded-xl'>
                     <form className='max-w-2xl mx-auto' onSubmit={handlePlaceComment}>
-                        <div className='text-3xl text-center font-bold py-5'>Please give your valuable review about: {title} therapy</div>
-                        <div className='divider -mt-2'></div>
+
+                        {
+                            user?.email ?
+                                <>
+                                    <div className='text-3xl text-center font-bold py-5'>Please give your valuable review about: {title} therapy</div>
+                                    <div className='divider -mt-2'></div>
+
+                                    <div>
+                                        <p className='mx-3 text-lg font-semibold'>Name:</p>
+                                        <input name='name' defaultValue={user?.name} type="text" placeholder="Your Name" className="input w-full input-bordered" required />
+                                    </div>
+
+                                    <div className='my-5'>
+                                        <p className='mx-3 text-lg font-semibold'>Phone:</p>
+                                        <input name='phone' type="text" placeholder="Your Phone" className="input w-full input-bordered" required />
+                                    </div>
+
+                                    <div className='my-5'>
+                                        <p className='mx-3 text-lg font-semibold'>Rating Service:</p>
+                                        <input name='rating' type="text" placeholder="Give a rating based on 5" className="input w-full input-bordered" required />
+                                    </div>
+
+                                    <div className='my-5'>
+                                        <p className='mx-3 text-lg font-semibold'>Email:</p>
+                                        <input name='email' type="text" placeholder="Your Email" defaultValue={user?.email} readOnly className="input w-full input-bordered text-gray-500" required />
+                                    </div>
+
+                                    <div className='my-5'>
+                                        <p className='mx-3 text-lg font-semibold'>Comments:</p>
+                                        <textarea name='comments' className="textarea textarea-bordered w-full h-24" placeholder="Comments" required
+                                        ></textarea>
+                                    </div>
+
+                                    <div className='flex justify-center'>
+                                        <input className='btn mb-5' type="submit" value="Submit Review" />
+                                    </div>
+                                </>
+
+                                :
+
+                                <>
+                                    <div className='text-3xl text-center font-bold py-5'>Sign In to give your valuable review</div>
+                                    <div className='divider -mt-2'></div>
+
+                                    <div className='flex justify-center'>
+                                        <button className='btn'><Link to='/signin'>Sign In</Link></button>
+                                    </div>
+                                </>
+                        }
 
 
-                        <div>
-                            <p className='mx-3 text-lg font-semibold'>Name:</p>
-                            <input name='name' defaultValue={user?.name} type="text" placeholder="Your Name" className="input w-full input-bordered" required />
-                        </div>
-
-                        <div className='my-5'>
-                            <p className='mx-3 text-lg font-semibold'>Phone:</p>
-                            <input name='phone' type="text" placeholder="Your Phone" className="input w-full input-bordered" required />
-                        </div>
-
-                        <div className='my-5'>
-                            <p className='mx-3 text-lg font-semibold'>Rating Service:</p>
-                            <input name='rating' type="text" placeholder="Give a rating based on 5" className="input w-full input-bordered" required />
-                        </div>
-
-                        <div className='my-5'>
-                            <p className='mx-3 text-lg font-semibold'>Email:</p>
-                            <input name='email' type="text" placeholder="Your Email" defaultValue={user?.email} readOnly className="input w-full input-bordered text-gray-500" required />
-                        </div>
-
-                        <div className='my-5'>
-                            <p className='mx-3 text-lg font-semibold'>Comments:</p>
-                            <textarea name='comments' className="textarea textarea-bordered w-full h-24" placeholder="Comments" required
-                            ></textarea>
-                        </div>
-                        <div className='flex justify-center'>
-                            <input className='btn mb-5' type="submit" value="Submit Review" />
-                        </div>
                     </form>
                     <Toaster />
                 </div>

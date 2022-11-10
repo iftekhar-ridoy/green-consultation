@@ -1,11 +1,8 @@
 import React from 'react';
 import toast, { Toaster } from 'react-hot-toast';
-import { useLoaderData } from 'react-router-dom';
-import Offer from './Offer';
 
 
 const AddService = () => {
-    const { offer, process } = useLoaderData();
 
     const handleAddService = event => {
         event.preventDefault();
@@ -20,8 +17,6 @@ const AddService = () => {
             title,
             img,
             description,
-            offer,
-            process
         }
 
         console.log(services);
@@ -52,7 +47,7 @@ const AddService = () => {
             <section>
                 <div className='bg-slate-200 p-10 rounded-xl'>
                     <form className='max-w-2xl mx-auto' onSubmit={handleAddService}>
-                        <div className='text-3xl text-center font-bold py-5'>Add Service</div>
+                        <div className='text-3xl text-center font-bold py-5'>Add New Service</div>
                         <div className='divider -mt-2'></div>
 
 

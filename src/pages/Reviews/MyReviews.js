@@ -39,7 +39,7 @@ const MyReviews = () => {
             <div className='divider -mt-2'></div>
             <div className="overflow-x-auto w-full mx-auto">
                 <div className='mx-3'>
-                    <table className="table w-full">
+                    {/* <table className="table w-full">
                         <thead>
                             <tr>
                                 <th>ServiceName</th>
@@ -49,18 +49,18 @@ const MyReviews = () => {
                                 <th>Delete</th>
                             </tr>
                         </thead>
-                        <tbody>
-                            {
-                                myReviews?.map(myReview =>
-                                    <MyReviewTable
-                                        key={myReview._id}
-                                        myReview={myReview}
-                                        handleDelete={handleDelete}
-                                    ></MyReviewTable>)
-                            }
+                        <tbody> */}
+                    {
+                        myReviews?.map(myReview =>
+                            <MyReviewTable
+                                key={myReview._id}
+                                myReview={myReview}
+                                handleDelete={handleDelete}
+                            ></MyReviewTable>)
+                    }
 
-                        </tbody>
-                    </table>
+                    {/* </tbody>
+                    </table> */}
                 </div>
             </div>
             <Toaster />

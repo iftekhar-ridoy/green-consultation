@@ -4,6 +4,8 @@ import ServiceCard from '../Services/ServiceCard';
 import banner from '../../Assets/Banner/banner.jpg'
 import { BsArrowRight } from 'react-icons/bs';
 import useTitle from '../../useTitle/useTitle';
+import person from '../../Assets/Person/person-icon-1682.png';
+import { RiHome8Fill, RiMailOpenFill, RiPhoneFill } from 'react-icons/ri';
 
 const Home = () => {
     const [services, setServices] = useState();
@@ -44,7 +46,7 @@ const Home = () => {
 
 
             {/* services  */}
-            <section>
+            <section className='bg-slate-200 py-5 rounded-xl'>
                 <div className='text-3xl text-center font-bold py-5'>The services I provide</div>
                 <div className='divider -mt-2'></div>
                 <div className='mt-14'>
@@ -57,10 +59,46 @@ const Home = () => {
                                 ></ServiceCard>)
                         }
                     </div>
-                    <div className='flex justify-center mt-10'>
+                    <div className='flex justify-center my-10'>
                         <Link to='/services'>
                             <button className='btn btn-outline'>Show All</button>
                         </Link>
+                    </div>
+                </div>
+            </section>
+
+
+            {/* about me  */}
+            <section>
+                <div className='text-3xl text-center font-bold py-5 mt-40'>About Me</div>
+                <div className='divider -mt-2'></div>
+                <div className='grid grid-cols-1 lg:grid-cols-2 mx-3 mt-14 mb-40 gap-6'>
+                    <div className='flex flex-col justify-center mx-3'>
+                        <p className='text-3xl font-bold mb-10'>Iftekharul Islam Ridoy — licensed mental health counselor, psychotherapist</p>
+                        <ul>
+                            <li className='font-semibold text-xl'>- Always very sympathetic towards the problems of the clients.</li>
+
+                            <li className='font-semibold text-xl'>- Can be a person’s best guide in times of mental crisis. #mentalcrisis</li>
+
+                            <li className='font-semibold text-xl'>- I am here to provide complete solutions for your mental troubles.</li>
+                        </ul>
+                    </div>
+                    <div className='flex justify-center'>
+                        <img className='max-w-xs' src={person} alt="" />
+                    </div>
+                </div>
+            </section>
+
+
+            {/* contact  */}
+            <section className='bg-slate-200 py-5 rounded-xl mb-40'>
+                <div className='text-3xl text-center font-bold py-5'>Contact</div>
+                <div className='divider -mt-2'></div>
+                <div className='mt-14 flex justify-center'>
+                    <div>
+                        <p className='flex items-center text-xl font-semibold mb-3'><RiPhoneFill className='mr-3'></RiPhoneFill> 01302690768</p>
+                        <p className='flex items-center text-xl font-semibold mb-3'><RiMailOpenFill className='mr-3'></RiMailOpenFill> iftekharulislam.ridoy@gmail.com</p>
+                        <p className='flex items-start text-xl font-semibold mb-3'><RiHome8Fill className='mr-3 mt-1'></RiHome8Fill> Road No: 3 <br /> Ward No: 3 <br />Stadium Para, Khordoshaptana <br />lalmonirhat</p>
                     </div>
                 </div>
             </section>
