@@ -4,16 +4,6 @@
 
 Live website link: [https://green-consult.web.app/]
 
-
-## Client Side Repo
-
-Client side repository link: https://github.com/Porgramming-Hero-web-course/b6a11-service-review-client-side-Iftekharul152811
-
-## Server Side Repo
-
-Server side repository link: https://github.com/Porgramming-Hero-web-course/b6a11-service-review-server-side-Iftekharul152811
-
-
 ## About this website
 
 1. This site refers a single person serving site.

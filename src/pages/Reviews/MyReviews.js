@@ -4,10 +4,12 @@ import MyReviewTable from './MyReviewTable';
 import toast, { Toaster } from 'react-hot-toast';
 import { FaArrowRight } from 'react-icons/fa'
 import { Link } from 'react-router-dom';
+import MyReviewEditModal from './MyReviewEditModal';
 
 const MyReviews = () => {
     const { user, loading } = useContext(AuthContext);
     const [myReviews, setMyReviews] = useState([]);
+    const [editReview, setEditReview] = useState({});
 
     useEffect(() => {
         fetch(`https://assignment-11-server-iftekharul152811.vercel.app/myReviews?email=${user?.email}`)
@@ -37,6 +39,7 @@ const MyReviews = () => {
     if (loading) {
         return <div className="loader absolute left-1/2 top-20"></div>
     }
+
     return (
         <div className='max-w-7xl mx-auto'>
 
@@ -62,10 +65,14 @@ const MyReviews = () => {
                                             key={myReview._id}
                                             myReview={myReview}
                                             handleDelete={handleDelete}
+                                            setEditReview={setEditReview}
                                         ></MyReviewTable>)
                                 }
                             </div>
                         </div>
+                        {
+                            <MyReviewEditModal editReview={editReview}></MyReviewEditModal>
+                        }
                     </>
             }
             <Toaster />
